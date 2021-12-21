@@ -1,5 +1,5 @@
-package generics_usecases;
 
+package generics_usecase;
 public class Max_Generics<T extends Comparable<T>> {
 T x,y,z;
 
@@ -15,7 +15,7 @@ public T maximum() {
 }
 public static <T extends Comparable<T>> T maximum(T x,T y,T z) {
 	T max = x;
-	if(y.compareTo(max) > 0) {
+	if(y.compareTo(max) > 0)
 		max = y;
 	}
 	if(z.compareTo(max)> 0) {
@@ -45,11 +45,4 @@ public static void msin (String args[]) {
 	new Max_Generics (xint, yint, zint).maximum();
 	new Max_Generics (xStr,yStr,zStr).maximum();
 }
-printMax (x,y,z,max);
-return max;
-
-public static void main(String args[]) {
-	Integer xInt =2,yInt =3,zInt =5 ;
-	new Max_Generics(xint, yint, zint).maximum();
-	}
 }
